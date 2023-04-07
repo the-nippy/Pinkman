@@ -1,0 +1,24 @@
+{
+  "name": "pinkman",
+  "version": "1.0.0",
+  "description": "application build by electron，includes some tools for developers.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badgerYo/Pinkman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/badgerYo/Pinkman/issues"
+  },
+  "homepage": "https://github.com/badgerYo/Pinkman#readme",
+  "devDependencies": {
+    "electron": "^24.0.0"
+  }
+}
