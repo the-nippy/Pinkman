@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/badgerYo/Pinkman#readme",
   "devDependencies": {
-    "electron": "^24.0.0"
+    "electron": "^24.0.0",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2"
   }
 }
