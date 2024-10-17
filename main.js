@@ -1,21 +1,30 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow } = require('electron')
+const path = require('path')
 
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
-  });
+    webPreferences: {
+      preload: path.join(__dirname, 'preload.js')
+    }
+  })
+  // win.loadURL('https://github.com');
+  win.loadFile('index.html')
+  const contents = win.webContents;
+  win.webContents.openDevTools(); // 打开开发者工具
+  console.log(contents)
+}
 
-  win.loadFile("./views/index.html");
-};
 
+// app ready 后才能创建窗口
 app.whenReady().then(() => {
   createWindow();
-  app.on("activate", () => {
+  app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
-  });
-});
+  })
+})
 
-app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") app.quit();
-});
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') app.quit()
+})

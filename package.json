@@ -1,26 +1,22 @@
 {
   "name": "pinkman",
   "version": "1.0.0",
-  "description": "application build by electron，includes some tools for developers.",
+  "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/badgerYo/Pinkman.git"
+    "url": "git+https://github.com/the-nippy/Pinkman.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "nippy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/badgerYo/Pinkman/issues"
+    "url": "https://github.com/the-nippy/Pinkman/issues"
   },
-  "homepage": "https://github.com/badgerYo/Pinkman#readme",
+  "homepage": "https://github.com/the-nippy/Pinkman#readme",
   "devDependencies": {
-    "electron": "^24.0.0",
-    "sass": "^1.62.1",
-    "sass-loader": "^13.2.2"
+    "electron": "^33.0.1"
   }
 }
