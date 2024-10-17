@@ -10,7 +10,8 @@ const createWindow = () => {
     }
   })
   // win.loadURL('https://github.com');
-  win.loadFile('index.html')
+  // win.loadFile('index.html')
+  win.loadURL('http://127.0.0.1:5173')
   const contents = win.webContents;
   win.webContents.openDevTools(); // 打开开发者工具
   console.log(contents)

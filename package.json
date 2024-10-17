@@ -2,9 +2,12 @@
   "name": "pinkman",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/main/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dev_ui": "vite --config vite.config.js",
+    "dev_e": "electron .",
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,11 @@
   },
   "homepage": "https://github.com/the-nippy/Pinkman#readme",
   "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
     "electron": "^33.0.1"
+  },
+  "dependencies": {
+    "vite": "^5.4.9",
+    "vue": "^3.5.12"
   }
 }
