@@ -4,7 +4,7 @@
       <h2>Pinkman, dev-tool</h2>
     </div>
     <div class="main_contents">
-      <div v-for="item in items" :key="item.id">
+      <div v-for="item in items" :key="item.id" class="block">
         <div class="item_header">
           <i :class="['iconfont', item.icon]" aria-setsize="30"></i>
           <div class="">
@@ -13,7 +13,7 @@
         </div>
         <div class="item_contents">
           <div v-for="ele in item.contents" :key="ele.name">
-            <div>{{ ele.name }}</div>
+            <div class="detail">{{ ele.name }}</div>
           </div>
         </div>
       </div>
@@ -46,6 +46,9 @@ export default {
 .main {
   flex: 1;
 }
+.block{
+  margin-bottom: 40px;
+}
 
 .main_header {
   height: 64px;
@@ -66,6 +69,7 @@ export default {
 }
 
 .item_contents {
+  margin-top: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -73,6 +77,10 @@ export default {
 
 .icon_search{
   color:rgb(27, 128, 128)
+}
+
+.detail{
+  margin-right: 20px;
 }
 
 </style>
