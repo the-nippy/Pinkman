@@ -30,13 +30,13 @@ export default {
 <style scoped>
 .slider {
   width: 10%;
-  min-width: 96px;
+  min-width: 200px;
   height: 100%;
-  border-right: solid #777 1px;
+  border-right: solid #f3f3f3 2px;
 }
 .slider_item{
   height: 60px;
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid #f7f7f7;
   display: flex;
   flex-direction: column;
   justify-content: center;

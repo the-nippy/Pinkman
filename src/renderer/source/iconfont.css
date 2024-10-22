@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4719918 */
+  src: url('//at.alicdn.com/t/c/font_4719918_wgkbwzyvkz.woff2?t=1729603466343') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4719918_wgkbwzyvkz.woff?t=1729603466343') format('woff'),
+       url('//at.alicdn.com/t/c/font_4719918_wgkbwzyvkz.ttf?t=1729603466343') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 24px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pm-tools:before {
+  content: "\e638";
+}
+
+.icon-pm-linux:before {
+  content: "\e6c1";
+}
+
+.icon-pm-color:before {
+  content: "\e608";
+}
+
+.icon-pm-tupian:before {
+  content: "\e603";
+}
+
+.icon-pm-yunduanshangchuan:before {
+  content: "\ec1d";
+}
+
+.icon-pm-doc:before {
+  content: "\e6f6";
+}
+
+.icon-pm-search:before {
+  content: "\e87c";
+}
+
+.icon-pm-shangchuantupian:before {
+  content: "\e61e";
+}
+
+.icon-pm-google-line:before {
+  content: "\eab2";
+}
+
+.icon-pm-a-FrontEnd:before {
+  content: "\e633";
+}
