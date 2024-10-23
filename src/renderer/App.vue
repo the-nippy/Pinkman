@@ -10,8 +10,6 @@ import Slider from './components/Slider.vue';
 import Main from './components/Main.vue';
 
 
-
-
 export default {
   name: 'App',
   components: {
