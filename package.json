@@ -7,7 +7,7 @@
     "start": "electron .",
     "dev_ui": "vite --config vite.config.js",
     "dev_e": "electron .",
-    "build": "vite build"
+    "build_ui": "vite build"
   },
   "repository": {
     "type": "git",

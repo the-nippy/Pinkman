@@ -2,9 +2,10 @@
   <div class="main">
     <div class="main_header">
       <h2>Pinkman, dev-tool</h2>
+      <!-- <button @click="submitTask">添加任务</button> -->
     </div>
     <div class="main_contents">
-      <div v-for="item in items" :key="item.id" class="block">
+      <div v-for="item in items" :key="item.id" class="block" @click="submitTask(item)">
         <div class="item_header">
           <i :class="['iconfont block_icon', item.icon]" aria-setsize="30"></i>
           <div class="block_name">
@@ -32,14 +33,23 @@
 <script>
 import { MainFnConfig } from "../constant";
 
-console.info("[MainFnConfig]", MainFnConfig);
+// console.info("[MainFnConfig]", MainFnConfig);
 
 export default {
   name: "Main",
   data() {
     return {
       items: MainFnConfig,
+      taskName: 'xxx',
     };
+  },
+
+  methods: {
+    submitTask(item) {
+      if (this.taskName.trim()) {
+        this.$emit('add-task', item);
+      }
+    },
   },
 };
 </script>
@@ -69,11 +79,11 @@ export default {
   font-size: 18px;
 }
 
-.block_divide{
+.block_divide {
   height: 2px;
   margin-left: 12px;
   background: #fff;
-  width: 100%; 
+  width: 100%;
 }
 
 .main_header {
