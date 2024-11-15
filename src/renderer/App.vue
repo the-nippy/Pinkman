@@ -2,8 +2,8 @@
   <div id="app">
     <Slider :tasks="tasks"></Slider>
 
-    <Main v-if="!currentTask" @add-task="addTask"></Main>
-    <Content v-if="currentTask"></Content>
+    <Main v-if="!currentTask" @add-task="addTask" @set-currenttask="setCurrentTask"></Main>
+    <Content v-if="currentTask" :currentTask="currentTask"></Content>
 
   </div>
 </template>
@@ -22,8 +22,11 @@ export default {
     Content
   },
   data() {
+    let tasks = [];
+    const localTasks = localStorage.getItem('TASKS');
+    localTasks && (tasks = JSON.parse(localTasks));
     return {
-      tasks: [],
+      tasks: tasks,
       nextId: 1,
       currentTask: null
     }
@@ -31,6 +34,7 @@ export default {
   methods: {
     addTask(task) {
       this.tasks.push({ id: this.nextId++, ...task });
+      localStorage.setItem("TASKS", JSON.stringify(this.tasks))
     },
     setCurrentTask(task) {
       this.currentTask = task;

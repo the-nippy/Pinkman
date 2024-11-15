@@ -9,6 +9,17 @@ const createWindow = () => {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+  win.webContents.session.webRequest.onHeadersReceived({ urls: ["*://*/*"] },
+    (d, c) => {
+      if (d.responseHeaders['X-Frame-Options']) {
+        delete d.responseHeaders['X-Frame-Options'];
+      } else if (d.responseHeaders['x-frame-options']) {
+        delete d.responseHeaders['x-frame-options'];
+      }
+
+      c({ cancel: false, responseHeaders: d.responseHeaders });
+    }
+  );
   // win.loadURL('https://github.com');
   // win.loadFile('index.html')
   win.loadURL('http://127.0.0.1:5173')

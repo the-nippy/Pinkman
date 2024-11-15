@@ -5,7 +5,7 @@
       <!-- <button @click="submitTask">添加任务</button> -->
     </div>
     <div class="main_contents">
-      <div v-for="item in items" :key="item.id" class="block" @click="submitTask(item)">
+      <div v-for="item in items" :key="item.id" class="block">
         <div class="item_header">
           <i :class="['iconfont block_icon', item.icon]" aria-setsize="30"></i>
           <div class="block_name">
@@ -14,7 +14,7 @@
           <div class="block_divide"></div>
         </div>
         <div class="item_contents">
-          <div v-for="ele in item.contents" :key="ele.name" class="content">
+          <div v-for="ele in item.contents" :key="ele.name" class="content" @click="submitTask(ele)">
             <div v-if="ele.icon.includes('http')" class="icon_wrapper">
               <img :src="ele.icon" />
             </div>
@@ -48,9 +48,10 @@ export default {
     submitTask(item) {
       if (this.taskName.trim()) {
         this.$emit('add-task', item);
+        this.$emit('set-currenttask', item)
       }
     },
-  },
+  }
 };
 </script>
 

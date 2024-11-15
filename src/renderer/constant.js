@@ -29,7 +29,7 @@ export const MainFnConfig = [{
     name: '打开MDN文档',
     id: 'mdn',
     type: TYPES.web_url,
-    url: "",
+    url: "https://developer.mozilla.org/zh-CN/docs/Web/CSS",
     icon: 'icon-pm-a-FrontEnd',
     desc: '',
     icon_color: '#a00'
